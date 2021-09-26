@@ -6,6 +6,9 @@ local function on_attach()
 end
 
 require'lspconfig'.pyright.setup{ on_attach=on_attach }
+require'lspconfig'.gopls.setup{
+  cmd = { "gopls" }
+}
 require'lspconfig'.tsserver.setup{ on_attach=on_attach }
 require'lspconfig'.vuels.setup{
   on_attach=on_attach,
