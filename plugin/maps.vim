@@ -34,6 +34,16 @@ nnoremap <leader>s <cmd>split<CR>
 nnoremap <C-l> <cmd>bn<CR>
 nnoremap <C-h> <cmd>bp<CR>
 nnoremap <S-q> <cmd>bd<CR>
+nnoremap <leader>0 0gt
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>8 8gt
+nnoremap <leader>9 9gt
 
 " Clipboard
 vnoremap <leader>p "_dP
@@ -81,4 +91,3 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
