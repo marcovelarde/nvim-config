@@ -5,7 +5,7 @@ P = function(v)
   return v
 end
 
-require('onedark').setup()
+--require('onedark').setup()
 
 require('go').setup({
   goimport = 'golsp',

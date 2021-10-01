@@ -4,7 +4,13 @@ call plug#begin('~/.vim/plugged')
 
 " LSP plugins
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
+" Completation plugins
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'L3MON4D3/LuaSnip'
+
 Plug 'glepnir/lspsaga.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
@@ -34,6 +40,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'psf/black'
 " Plug 'crispgm/nvim-go'
 Plug 'ray-x/go.nvim'
+Plug 'jiangmiao/auto-pairs'
 
 " Helpers
 Plug 'preservim/nerdcommenter'
@@ -48,3 +55,7 @@ call plug#end()
 lua require("presi")
 
 let mapleader = " "
+
+set termguicolors
+let ayucolor="mirage"
+colorscheme onedark

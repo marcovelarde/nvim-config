@@ -5,16 +5,59 @@ local function on_attach()
     -- TODO: Implement Telescopic stuff
 end
 
--- require'lspconfig'.pyright.setup{ on_attach=on_attach }
+-- Completation configuration
+vim.o.completeopt = 'menuone,noselect'
+local cmp = require'cmp'
+local luasnip = require'luasnip'
+
+require'cmp'.setup{
+  snippet = {
+    expand = function(args)
+      require'luasnip'.lsp_expand(args.body)
+    end,
+  },
+  mapping = {
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close(),
+    ['<CR>'] = cmp.mapping.confirm({
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    }),
+  },
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' }
+  }
+}
+-- End completation configuration
+
+-- TODO: capabilities must be added on every ls.
+-- make capabilities a function?
 require'lspconfig'.pylsp.setup{
+  capabilities = require'cmp_nvim_lsp'.update_capabilities(
+    vim.lsp.protocol.make_client_capabilities()
+  ),
   cmd = { "pylsp" },
   filetypes = { "python" }
 }
 require'lspconfig'.gopls.setup{
+  capabilities = require'cmp_nvim_lsp'.update_capabilities(
+    vim.lsp.protocol.make_client_capabilities()
+  ),
   cmd = { "gopls" }
 }
-require'lspconfig'.tsserver.setup{ on_attach=on_attach }
+require'lspconfig'.tsserver.setup{
+  capabilities = require'cmp_nvim_lsp'.update_capabilities(
+    vim.lsp.protocol.make_client_capabilities()
+  ),
+  on_attach=on_attach
+}
 require'lspconfig'.vuels.setup{
+  capabilities = require'cmp_nvim_lsp'.update_capabilities(
+    vim.lsp.protocol.make_client_capabilities()
+  ),
   on_attach=on_attach,
   cmd = { "vls" },
     filetypes = { "vue" },
