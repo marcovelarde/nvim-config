@@ -6,9 +6,14 @@ local function on_attach()
 end
 
 -- Completation configuration
-vim.o.completeopt = 'menuone,noselect'
+local cmp_nvim = require'cmp_nvim_lsp'
 local cmp = require'cmp'
 local luasnip = require'luasnip'
+
+local capabilities = cmp_nvim.update_capabilities(
+  vim.lsp.protocol.make_client_capabilities()
+)
+vim.o.completeopt = 'menuone,noselect'
 
 require'cmp'.setup{
   snippet = {
@@ -36,28 +41,20 @@ require'cmp'.setup{
 -- TODO: capabilities must be added on every ls.
 -- make capabilities a function?
 require'lspconfig'.pylsp.setup{
-  capabilities = require'cmp_nvim_lsp'.update_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
-  ),
+  capabilities = capabilities,
   cmd = { "pylsp" },
   filetypes = { "python" }
 }
 require'lspconfig'.gopls.setup{
-  capabilities = require'cmp_nvim_lsp'.update_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
-  ),
+  capabilities = capabilities,
   cmd = { "gopls" }
 }
 require'lspconfig'.tsserver.setup{
-  capabilities = require'cmp_nvim_lsp'.update_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
-  ),
+  capabilities = capabilities,
   on_attach=on_attach
 }
 require'lspconfig'.vuels.setup{
-  capabilities = require'cmp_nvim_lsp'.update_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
-  ),
+  capabilities = capabilities,
   on_attach=on_attach,
   cmd = { "vls" },
     filetypes = { "vue" },
