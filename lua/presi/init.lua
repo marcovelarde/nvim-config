@@ -7,10 +7,10 @@ end
 
 --require('onedark').setup()
 
-require('go').setup({
-  goimport = 'golsp',
-  gofmt = 'golsp',
-})
+--require('go').setup({
+  --goimport = 'golsp',
+  --gofmt = 'golsp',
+--})
 
 if pcall(require, 'plenary') then
   RELOAD = require('plenary.reload').reload_module
@@ -20,5 +20,3 @@ if pcall(require, 'plenary') then
     return require(name)
   end
 end
-
-require('py_lsp').setup()

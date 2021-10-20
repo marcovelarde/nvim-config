@@ -33,7 +33,6 @@ Plug 'theHamsta/nvim-dap-virtual-text'
 
 " Syntax plugins
 Plug 'nvim-lua/completion-nvim'
-Plug 'HallerPatrick/py_lsp.nvim'
 Plug 'tbastos/vim-lua'
 Plug 'posva/vim-vue'
 Plug 'digitaltoad/vim-pug'
