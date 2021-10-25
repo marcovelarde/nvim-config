@@ -5,13 +5,6 @@ P = function(v)
   return v
 end
 
---require('onedark').setup()
-
---require('go').setup({
-  --goimport = 'golsp',
-  --gofmt = 'golsp',
---})
-
 if pcall(require, 'plenary') then
   RELOAD = require('plenary.reload').reload_module
 
@@ -20,3 +13,11 @@ if pcall(require, 'plenary') then
     return require(name)
   end
 end
+
+-- Indentation
+vim.opt.list = true
+vim.opt.listchars:append("eol:↴")
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    show_current_context = true,
+}

@@ -45,6 +45,7 @@ Plug 'jiangmiao/auto-pairs'
 " Helpers
 Plug 'preservim/nerdcommenter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Status bottom bar
 Plug 'vim-airline/vim-airline'
