@@ -17,4 +17,5 @@ set undofile
 set scrolloff=8
 set signcolumn=yes
 set guicursor=
-set colorcolumn=80
+set colorcolumn=95
+autocmd FileType python :setlocal colorcolumn=80
