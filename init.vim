@@ -20,6 +20,7 @@ Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim'
 Plug 'folke/lsp-colors.nvim'
 Plug 'navarasu/onedark.nvim'
+Plug 'tyrannicaltoucan/vim-deep-space'
 
 " Telescope
 Plug 'nvim-lua/popup.nvim'
@@ -55,6 +56,6 @@ lua require("presi")
 
 let mapleader = " "
 
+set background=dark
 set termguicolors
-let ayucolor="mirage"
-colorscheme onedark
+colorscheme deep-space
