@@ -16,6 +16,6 @@ set undodir=~/.vim/undodir
 set undofile
 set scrolloff=8
 set signcolumn=yes
-set guicursor=
+"set guicursor=
 set colorcolumn=95
 autocmd FileType python :setlocal colorcolumn=80
