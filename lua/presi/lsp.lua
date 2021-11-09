@@ -18,7 +18,7 @@ vim.o.completeopt = 'menuone,noselect'
 require'cmp'.setup{
   snippet = {
     expand = function(args)
-      require'luasnip'.lsp_expand(args.body)
+      luasnip.lsp_expand(args.body)
     end,
   },
   mapping = {
@@ -80,6 +80,17 @@ require'lspconfig'.vuels.setup{
       }
     }
 }
+
+-- Lua lsp
+-- https://github.com/tjdevries/nlua.nvim/pull/10
+require'nlua.lsp.nvim'.setup(require'lspconfig', {
+  cmd = {
+    '/usr/bin/lua-language-server',
+    '-E',
+    '/usr/lib/lua-language-server/main.lua'
+  },
+  capabilities = capabilities,
+})
 
 local opts = {
     -- whether to highlight the currently hovered symbol
