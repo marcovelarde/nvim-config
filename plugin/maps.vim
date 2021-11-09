@@ -53,11 +53,11 @@ nnoremap <leader>Y gg"+yG
 
 " Telescope
 nnoremap <C-p> <cmd>Telescope git_files<CR>
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <C-f> <cmd>Telescope find_files<CR>
+nnoremap <C-s> <cmd>Telescope git_status<CR>
 nnoremap <leader>lg <cmd>Telescope live_grep<CR>
 nnoremap <leader>b <cmd>Telescope buffers<CR>
 nnoremap <leader>ht <cmd>Telescope help_tags<CR>
-nnoremap <leader>gs <cmd>Telescope git_status<CR>
 
 " Commenter
 vmap ++ :CommentToggle<CR>
