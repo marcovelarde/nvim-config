@@ -45,7 +45,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
 " Helpers
-Plug 'preservim/nerdcommenter'
+Plug 'terrortylor/nvim-comment'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'lukas-reineke/indent-blankline.nvim'
 

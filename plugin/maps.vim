@@ -60,8 +60,8 @@ nnoremap <leader>ht <cmd>Telescope help_tags<CR>
 nnoremap <leader>gs <cmd>Telescope git_status<CR>
 
 " Commenter
-vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggle
+vmap ++ :CommentToggle<CR>
+nmap ++ :CommentToggle<CR>
 
 " LSP
 nmap <silent>gd :lua vim.lsp.buf.definition()<CR>
