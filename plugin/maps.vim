@@ -79,6 +79,11 @@ nnoremap K :lua vim.lsp.buf.hover()<CR>
 " Prettier
 nnoremap <silent><leader>f :Prettier<CR>
 
+" NvimTree
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
