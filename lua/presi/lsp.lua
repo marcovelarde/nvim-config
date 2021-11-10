@@ -81,6 +81,11 @@ require'lspconfig'.vuels.setup{
     }
 }
 
+-- Vim lsp
+require'lspconfig'.vimls.setup{
+  cmd = { 'vim-language-server', '--stdio' }
+}
+
 -- Lua lsp
 -- https://github.com/tjdevries/nlua.nvim/pull/10
 require'nlua.lsp.nvim'.setup(require'lspconfig', {
