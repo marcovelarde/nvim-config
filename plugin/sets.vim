@@ -18,4 +18,5 @@ set scrolloff=8
 set signcolumn=yes
 "set guicursor=
 set colorcolumn=95
+set mouse=a
 autocmd FileType python :setlocal colorcolumn=80
