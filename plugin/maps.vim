@@ -1,6 +1,7 @@
 " Base maps
 nnoremap <space><CR> :so ~/.config/nvim/init.vim<CR>
-nnoremap <silent><leader>w :w<CR> :edit<CR>
+nnoremap <silent><leader>w :w<CR>
+nnoremap <silent><leader>we :w<CR> :edit<CR>
 nnoremap Y y$
 
 " Moving text
