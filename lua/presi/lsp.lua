@@ -40,10 +40,16 @@ require'cmp'.setup{
 
 -- TODO: capabilities must be added on every ls.
 -- make capabilities a function?
+-- vim.api.nvim_set_var('pylsp.plugins.jedi.environment', './venv/bin/python')
 require'lspconfig'.pylsp.setup{
   capabilities = capabilities,
   cmd = { "pylsp" },
-  filetypes = { "python" }
+  filetypes = { "python" },
+  plugins = {
+    jedi = {
+      environment = "./venv"
+    }
+  }
 }
 require'lspconfig'.gopls.setup{
   capabilities = capabilities,
@@ -110,3 +116,7 @@ local opts = {
 }
 
 require('symbols-outline').setup(opts)
+
+-- vim.api.nvim_set_var('pylsp.plugins.jedi.environment', '/home/presi/cfocap/cfocapback/venv')
+-- vim.api.nvim_set_var('python3_host_prog', '/usr/bin/python3')
+-- vim.api.nvim_set_var('python3_host_prog', './venv/bin/python')
