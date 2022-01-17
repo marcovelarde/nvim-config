@@ -19,4 +19,7 @@ set signcolumn=yes
 "set guicursor=
 set colorcolumn=95
 set mouse=a
+set background=dark
+set termguicolors
+colorscheme deep-space
 autocmd FileType python :setlocal colorcolumn=80

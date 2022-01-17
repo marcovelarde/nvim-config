@@ -66,7 +66,3 @@ call plug#end()
 lua require("presi")
 
 let mapleader = " "
-
-set background=dark
-set termguicolors
-colorscheme deep-space
