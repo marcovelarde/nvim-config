@@ -23,7 +23,7 @@ local _ = require("nvim-treesitter.configs").setup {
   highlight = {
     enable = true,
     use_languagetree = false,
-    -- disable = { "vue" },
+    disable = { "vue" },
     custom_captures = custom_captures,
   },
   refactor = {

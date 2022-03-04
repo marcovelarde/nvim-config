@@ -85,5 +85,8 @@ nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
+" SymbolsOutLine
+nnoremap <C-k> :SymbolsOutline<CR>
+
 " inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 " inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
