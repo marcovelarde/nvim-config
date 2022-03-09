@@ -57,6 +57,7 @@ Plug 'terrortylor/nvim-comment'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 " Status bottom bar
 Plug 'vim-airline/vim-airline'
