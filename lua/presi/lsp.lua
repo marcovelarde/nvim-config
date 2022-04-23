@@ -5,55 +5,82 @@ local function on_attach()
     -- TODO: Implement Telescopic stuff
 end
 
--- Completation configuration
 local cmp_nvim = require'cmp_nvim_lsp'
 local cmp = require'cmp'
 local luasnip = require'luasnip'
+local lspconfig = require'lspconfig'
 
-local capabilities = cmp_nvim.update_capabilities(
-  vim.lsp.protocol.make_client_capabilities()
-)
+-- Completation configuration
+vim.o.completeopt = 'menuone,noselect'
+vim.g.completion_chain_complete_list = "['exact', 'substring', 'fuzzy']"
 vim.o.completeopt = 'menuone,noselect'
 
-require'cmp'.setup{
+-- Global setup
+cmp.setup({
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
     end,
   },
-  mapping = {
+  window = {
+    completation = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+  mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
-    ['<CR>'] = cmp.mapping.confirm({
-      behavior = cmp.ConfirmBehavior.Replace,
-      select = true,
-    })
-  },
-  sources = {
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  }),
+  sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'luasnip' }
+    { name = 'luasnip' },
+  }, {
+    { name = 'buffer' },
+  })
+})
+
+-- '/' cmd setup
+cmp.setup.cmdline('/', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'buffer' }
   }
-}
+})
+
+-- ':' cmd setup
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path'}
+  }, {
+    { name = 'buffer' }
+  })
+})
+
+local capabilities = cmp_nvim.update_capabilities(
+  vim.lsp.protocol.make_client_capabilities()
+)
+
 -- End completation configuration
 
 -- TODO: capabilities must be added on every ls.
 -- make capabilities a function?
-require'lspconfig'.pylsp.setup{
+lspconfig.pylsp.setup{
   capabilities = capabilities,
   cmd = { "pylsp" },
   filetypes = { "python" }
 }
-require'lspconfig'.gopls.setup{
+lspconfig.gopls.setup{
   capabilities = capabilities,
   cmd = { "gopls" }
 }
-require'lspconfig'.tsserver.setup{
+lspconfig.tsserver.setup{
   capabilities = capabilities,
   on_attach=on_attach
 }
-require'lspconfig'.vuels.setup{
+lspconfig.vuels.setup{
   capabilities = capabilities,
   on_attach=on_attach,
   cmd = { "vls" },
@@ -80,9 +107,12 @@ require'lspconfig'.vuels.setup{
       }
     }
 }
+lspconfig.html.setup {
+  capabilities = capabilities,
+}
 
 -- Vim lsp
-require'lspconfig'.vimls.setup{
+lspconfig.vimls.setup{
   cmd = { 'vim-language-server', '--stdio' }
 }
 
