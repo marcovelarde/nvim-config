@@ -63,8 +63,7 @@ local capabilities = cmp_nvim.update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
--- End completation configuration
-
+-- LSP server configuration
 -- TODO: capabilities must be added on every ls.
 -- make capabilities a function?
 lspconfig.pylsp.setup{
