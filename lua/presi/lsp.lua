@@ -7,8 +7,9 @@ end
 
 local cmp_nvim = require'cmp_nvim_lsp'
 local cmp = require'cmp'
-local luasnip = require'luasnip'
 local lspconfig = require'lspconfig'
+local luasnip = require'luasnip'
+require'luasnip.loaders.from_vscode'.lazy_load()
 
 -- Completation configuration
 vim.o.completeopt = 'menuone,noselect'
@@ -108,6 +109,12 @@ lspconfig.vuels.setup{
 }
 lspconfig.html.setup {
   capabilities = capabilities,
+}
+lspconfig.angularls.setup{
+  capabilities = capabilities,
+  -- cmd = { "ngserver", "--stdio", "--tsProbeLocations", "", "--ngProbeLocations", "" },
+  filetypes = { "typescript", "html", "typescriptreact", "typescript.tsx" },
+  -- root_dir = root_pattern("angular.json", ".git"),
 }
 
 -- Vim lsp
