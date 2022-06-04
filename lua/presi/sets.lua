@@ -20,7 +20,8 @@ vim.cmd("set nohlsearch")
 vim.cmd("colorscheme deep-space")
 vim.cmd("set noswapfile")
 vim.cmd("set nobackup")
-vim.cmd("autocmd FileType python :setlocal colorcolumn=80")
+vim.cmd("autocmd FileType python :setlocal shiftwidth=4 colorcolumn=80")
+vim.cmd("autocmd FileType go :setlocal shiftwidth=4 colorcolumn=100")
 
 -- Neovide
 vim.opt.guifont = "Source Code Pro:h11"
