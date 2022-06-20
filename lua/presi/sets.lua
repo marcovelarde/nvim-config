@@ -4,15 +4,15 @@ vim.opt.termguicolors = true
 vim.opt.smarttab = true
 vim.opt.cindent = true
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
+-- vim.opt.shiftwidth = 2
+-- vim.opt.tabstop = 4
+-- vim.opt.softtabstop = 4
 vim.opt.encoding = "utf-8"
 vim.opt.hidden = true
 vim.opt.undofile = true
-vim.opt.colorcolumn = "95"
+vim.opt.colorcolumn = "100"
 vim.opt.mouse = "a"
 vim.opt.background = "dark"
 vim.cmd("set undodir=~/.vim/undodir")
@@ -20,8 +20,8 @@ vim.cmd("set nohlsearch")
 vim.cmd("colorscheme deep-space")
 vim.cmd("set noswapfile")
 vim.cmd("set nobackup")
-vim.cmd("autocmd FileType python :setlocal shiftwidth=4 colorcolumn=80")
-vim.cmd("autocmd FileType go :setlocal shiftwidth=4 colorcolumn=100")
+vim.cmd("autocmd FileType typescript,vue,javascript :setlocal shiftwidth=2")
+vim.cmd("autocmd Filetype python :setlocal colorcolumn=80")
 
 -- Neovide
 vim.opt.guifont = "Source Code Pro:h11"
