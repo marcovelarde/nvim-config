@@ -67,4 +67,7 @@ Plug('vim-airline/vim-airline-themes')
 Plug('kyazdani42/nvim-web-devicons') -- for file icons
 Plug('kyazdani42/nvim-tree.lua')
 
+-- Scroll
+Plug('psliwka/vim-smoothie')
+
 vim.call('plug#end')
