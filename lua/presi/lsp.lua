@@ -107,6 +107,9 @@ lspconfig.vuels.setup{
       }
     }
 }
+lspconfig.sqls.setup{
+  filetypes = { "sql", "postgres" }
+}
 lspconfig.html.setup {
   capabilities = capabilities,
 }
