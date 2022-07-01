@@ -22,8 +22,9 @@ vim.cmd("set noswapfile")
 vim.cmd("set nobackup")
 vim.cmd("autocmd FileType typescript,vue,javascript :setlocal shiftwidth=2")
 vim.cmd("autocmd FileType python :setlocal colorcolumn=80")
-vim.cmd("autocmd FileType go :setlocal shiftwidth=2")
+vim.cmd("autocmd FileType go :setlocal shiftwidth=8")
 vim.cmd("autocmd FileType sql :setlocal shiftwidth=4")
+vim.cmd("autocmd FileType html :setlocal shiftwidth=4")
 
 -- Neovide
 vim.opt.guifont = "Source Code Pro:h11"
@@ -43,3 +44,8 @@ vim.g.python3_host_prog = '/home/presi/nvim-venv/bin/python'
 vim.g.airline_theme = 'apprentice'
 vim.g.deepspace_italics = 1
 vim.cmd("let g:airline#extensions#tabline#enabled = 1")
+
+-- Denols
+vim.g.markdown_fenced_languages = {
+  "ts=typescript"
+}
