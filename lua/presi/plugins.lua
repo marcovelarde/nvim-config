@@ -18,7 +18,6 @@ Plug('L3MON4D3/LuaSnip')
 
 Plug('glepnir/lspsaga.nvim')
 Plug('simrat39/symbols-outline.nvim')
-Plug('nvim-treesitter/nvim-treesitter')
 
 -- Color schemes
 Plug('morhetz/gruvbox')
@@ -55,7 +54,7 @@ Plug('tjdevries/nlua.nvim')
 -- Helpers
 Plug('terrortylor/nvim-comment')
 Plug('JoosepAlviste/nvim-ts-context-commentstring')
-Plug('prettier/vim-prettier', { ['do'] = 'yarn install' } )
+Plug('prettier/vim-prettier', { ['do'] = 'yarn install --frozen-lockfile --production' } )
 Plug('lukas-reineke/indent-blankline.nvim')
 Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' } )
 
