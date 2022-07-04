@@ -111,9 +111,9 @@ lspconfig.html.setup {
   capabilities = capabilities,
 }
 lspconfig.angularls.setup{
-  capabilities = capabilities,
+  -- capabilities = capabilities,
   -- cmd = { "ngserver", "--stdio", "--tsProbeLocations", "", "--ngProbeLocations", "" },
-  filetypes = { "typescript", "html", "typescriptreact", "typescript.tsx" },
+  -- filetypes = { "typescript", "html", "typescriptreact", "typescript.tsx" },
   -- root_dir = root_pattern("angular.json", ".git"),
 }
 
