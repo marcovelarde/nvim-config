@@ -69,4 +69,11 @@ Plug('kyazdani42/nvim-tree.lua')
 -- Scroll
 Plug('psliwka/vim-smoothie')
 
+-- Load dotenv
+Plug('tpope/vim-dotenv')
+
+-- Database
+Plug('tpope/vim-dadbod')
+Plug('kristijanhusak/vim-dadbod-ui')
+
 vim.call('plug#end')

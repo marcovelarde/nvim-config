@@ -47,6 +47,9 @@ vim.g.airline_theme = 'apprentice'
 vim.g.deepspace_italics = 1
 vim.cmd("let g:airline#extensions#tabline#enabled = 1")
 
+-- Database
+vim.g.db_ui_dotenv_variable_prefix = 'DBUI_'
+
 -- Denols
 vim.g.markdown_fenced_languages = {
   "ts=typescript"
