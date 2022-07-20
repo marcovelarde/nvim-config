@@ -72,6 +72,9 @@ Plug('psliwka/vim-smoothie')
 -- Load dotenv
 Plug('tpope/vim-dotenv')
 
+-- Git integration
+Plug('tpope/vim-fugitive')
+
 -- Database
 Plug('tpope/vim-dadbod')
 Plug('kristijanhusak/vim-dadbod-ui')
