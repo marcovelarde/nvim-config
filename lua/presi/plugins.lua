@@ -79,4 +79,7 @@ Plug('tpope/vim-fugitive')
 Plug('tpope/vim-dadbod')
 Plug('kristijanhusak/vim-dadbod-ui')
 
+-- Copilot
+Plug('github/copilot.vim')
+
 vim.call('plug#end')
