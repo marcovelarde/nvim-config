@@ -9,6 +9,7 @@ map('n', '<space><CR>', ':so ~/.config/nvim/init.lua<CR>', { noremap = true })
 map('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
 map('n', '<leader>we', ':w<CR> :edit', { noremap = true, silent = true })
 map('n', 'Y', 'y$', { noremap = true })
+map('n', '<C-t>', ':tabclose<CR>', { noremap = true, silent = true })
 
 -- Moving text
 map('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true })

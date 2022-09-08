@@ -74,6 +74,7 @@ Plug('tpope/vim-dotenv')
 
 -- Git integration
 Plug('tpope/vim-fugitive')
+Plug('sindrets/diffview.nvim')
 
 -- Database
 Plug('tpope/vim-dadbod')
