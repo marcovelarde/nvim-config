@@ -10,6 +10,8 @@ map('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
 map('n', '<leader>we', ':w<CR> :edit', { noremap = true, silent = true })
 map('n', 'Y', 'y$', { noremap = true })
 map('n', '<C-t>', ':tabclose<CR>', { noremap = true, silent = true })
+map('i', '<C-BS>', '<C-o>cb', { noremap = true, silent = true })
+map('i', '<C-Del>', '<C-o>cw', { noremap = true, silent = true })
 
 -- Moving text
 map('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true })
