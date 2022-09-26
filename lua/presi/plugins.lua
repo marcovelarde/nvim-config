@@ -80,6 +80,9 @@ Plug('sindrets/diffview.nvim')
 Plug('tpope/vim-dadbod')
 Plug('kristijanhusak/vim-dadbod-ui')
 
+-- Terminal
+Plug('akinsho/toggleterm.nvim')
+
 -- Copilot
 Plug('github/copilot.vim')
 

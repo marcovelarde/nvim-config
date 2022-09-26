@@ -9,7 +9,7 @@ map('n', '<space><CR>', ':so ~/.config/nvim/init.lua<CR>', { noremap = true })
 map('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
 map('n', '<leader>we', ':w<CR> :edit', { noremap = true, silent = true })
 map('n', 'Y', 'y$', { noremap = true })
-map('n', '<C-t>', ':tabclose<CR>', { noremap = true, silent = true })
+-- map('n', '<C-t>', ':tabclose<CR>', { noremap = true, silent = true })
 map('i', '<C-BS>', '<C-o>cb', { noremap = true, silent = true })
 map('i', '<C-Del>', '<C-o>cw', { noremap = true, silent = true })
 
@@ -64,6 +64,29 @@ map('n', '<C-s>', '<cmd>Telescope git_status<CR>', { noremap = true })
 map('n', '<leader>b', '<cmd>Telescope buffers<CR>', { noremap = true })
 map('n', '<leader>lg', '<cmd>Telescope live_grep<CR>', { noremap = true })
 map('n', '<leader>ht', '<cmd>Telescope help_tags<CR>', { noremap = true })
+
+-- ToggleTermi
+-- map('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+map('n', '<C-t>', '<cmd>ToggleTerm<CR>', { noremap = true })
+map('n', '1<C-t>', '<cmd>1ToggleTerm<CR>', { noremap = true })
+map('n', '2<C-t>', '<cmd>2ToggleTerm<CR>', { noremap = true })
+map('n', '3<C-t>', '<cmd>3ToggleTerm<CR>', { noremap = true })
+map('n', '4<C-t>', '<cmd>4ToggleTerm<CR>', { noremap = true })
+
+map('n', '<leader>ts', '<cmd>ToggleTerm direction=float<CR>', { noremap = true })
+map('n', '<leader>ts2', '<cmd>2ToggleTerm direction=float<CR>', { noremap = true })
+map('n', '<leader>ts3', '<cmd>3ToggleTerm direction=float<CR>', { noremap = true })
+map('n', '<leader>ts4', '<cmd>4ToggleTerm direction=float<CR>', { noremap = true })
+
+map('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical<CR>', { noremap = true })
+map('n', '<leader>tv2', '<cmd>2ToggleTerm direction=vertical<CR>', { noremap = true })
+map('n', '<leader>tv3', '<cmd>3ToggleTerm direction=vertical<CR>', { noremap = true })
+map('n', '<leader>tv4', '<cmd>4ToggleTerm direction=vertical<CR>', { noremap = true })
+
+map('n', '<leader>th', '<cmd>ToggleTerm direction=horizontal<CR>', { noremap = true })
+map('n', '<leader>th2', '<cmd>2ToggleTerm direction=horizontal<CR>', { noremap = true })
+map('n', '<leader>th3', '<cmd>3ToggleTerm direction=horizontal<CR>', { noremap = true })
+map('n', '<leader>th4', '<cmd>4ToggleTerm direction=horizontal<CR>', { noremap = true })
 
 -- Commenter
 map('v', '++', ':CommentToggle<CR>')
