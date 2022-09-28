@@ -6,7 +6,7 @@ vim.opt.cindent = true
 vim.opt.expandtab = true
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.shiftwidth = 2
+-- vim.opt.shiftwidth = 2
 -- vim.opt.tabstop = 4
 -- vim.opt.softtabstop = 4
 vim.opt.encoding = "utf-8"
@@ -29,6 +29,10 @@ vim.cmd("autocmd FileType python :setlocal colorcolumn=80")
 vim.cmd("autocmd FileType go :setlocal shiftwidth=8")
 vim.cmd("autocmd FileType sql :setlocal shiftwidth=4")
 vim.cmd("autocmd FileType html :setlocal shiftwidth=4")
+vim.cmd("autocmd FileType lua :setlocal shiftwidth=2")
+
+-- Dadbod-UI
+vim.cmd("autocmd FileType sql vnoremap <C-Enter> <Plug>(DBUI_ExecuteQuery)")
 
 -- Neovide
 vim.opt.guifont = "Source Code Pro:h11"
@@ -37,8 +41,8 @@ vim.opt.guifont = "Source Code Pro:h11"
 vim.opt.list = true
 vim.opt.listchars:append("eol:↴")
 require("indent_blankline").setup {
-    space_char_blankline = " ",
-    show_current_context = true,
+  space_char_blankline = " ",
+  show_current_context = true,
 }
 
 -- Python provider
