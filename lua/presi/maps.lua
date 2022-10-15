@@ -106,6 +106,9 @@ map('n', '<leader>vll', '<cmd>call LspLocationList()<CR>', { noremap = true })
 map('n', 'F', '<cmd>lua vim.lsp.buf.formatting()<CR>', { noremap = true })
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true })
 
+-- LSP Lines
+map('n', '<leader>ll', '<cmd>lua require("lsp_lines").toggle()<CR>', { noremap = true })
+
 -- Prettier
 map('n', '<leader>f', ':Prettier<CR>', { silent = true })
 

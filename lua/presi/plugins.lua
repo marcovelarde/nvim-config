@@ -19,6 +19,9 @@ Plug('L3MON4D3/LuaSnip')
 Plug('glepnir/lspsaga.nvim')
 Plug('simrat39/symbols-outline.nvim')
 
+-- LSP lines
+Plug('https://git.sr.ht/~whynothugo/lsp_lines.nvim')
+
 -- Color schemes
 Plug('morhetz/gruvbox')
 Plug('ayu-theme/ayu-vim')
