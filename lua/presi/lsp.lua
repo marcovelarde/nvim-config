@@ -64,7 +64,7 @@ cmp.setup.cmdline(':', {
   )
 })
 
-local capabilities = cmp_nvim.update_capabilities(
+local capabilities = cmp_nvim.default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
