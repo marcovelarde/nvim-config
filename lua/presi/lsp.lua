@@ -117,6 +117,12 @@ lspconfig.vuels.setup{
       }
     }
 }
+lspconfig.rust_analyzer.setup{
+  capabilities = capabilities,
+  on_attach = on_attach,
+  cmd = { "rust-analyzer" },
+  filetypes = { "rust" }
+}
 lspconfig.sqls.setup{
   filetypes = { "sql", "postgres" }
 }
