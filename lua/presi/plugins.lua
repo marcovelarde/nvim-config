@@ -1,6 +1,7 @@
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.vim/plugged')
+-- vim.call(Plug.begin(), '~/.vim/plugged')
 
 -- LSP plugins
 Plug('neovim/nvim-lspconfig')
@@ -40,7 +41,6 @@ Plug('rcarriga/nvim-dap-ui')
 Plug('theHamsta/nvim-dap-virtual-text')
 
 -- Syntax plugins
-Plug('nvim-lua/completion-nvim')
 Plug('tbastos/vim-lua')
 Plug('posva/vim-vue')
 Plug('digitaltoad/vim-pug')
@@ -52,7 +52,7 @@ Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug('nvim-treesitter/playground')
 
 -- Lua plugins
-Plug('tjdevries/nlua.nvim')
+Plug('folke/neodev.nvim')
 
 -- Helpers
 Plug('terrortylor/nvim-comment')
@@ -90,3 +90,4 @@ Plug('akinsho/toggleterm.nvim')
 Plug('github/copilot.vim')
 
 vim.call('plug#end')
+-- vim.call(Plug.end())

@@ -68,6 +68,46 @@ local capabilities = cmp_nvim.default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
+-- Lua lsp
+-- https://github.com/tjdevries/nlua.nvim/pull/10
+-- require'nlua.lsp.nvim'.setup(require'lspconfig', {
+-- require'neodev'.setup({
+-- })
+require("neodev").setup()
+vim.lsp.start({
+  name = "lua-language-server",
+  cmd = { "lua-language-server" },
+  before_init = require("neodev.lsp").before_init,
+  root_dir = vim.fn.getcwd(),
+  settings = { Lua = {} },
+})
+-- import lspconfig?
+
+
+lspconfig.lua_ls.setup({
+  cmd = {
+    '/usr/bin/lua-language-server',
+    '-E',
+    '/usr/lib/lua-language-server/main.lua'
+  },
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        globals = {'vim'},
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      telemetry = {
+        enalbe = false,
+      },
+    },
+  },
+})
 -- LSP server configuration
 -- TODO: capabilities must be added on every ls.
 -- make capabilities a function?
@@ -140,17 +180,6 @@ lspconfig.angularls.setup{
 lspconfig.vimls.setup{
   cmd = { 'vim-language-server', '--stdio' }
 }
-
--- Lua lsp
--- https://github.com/tjdevries/nlua.nvim/pull/10
-require'nlua.lsp.nvim'.setup(require'lspconfig', {
-  cmd = {
-    '/usr/bin/lua-language-server',
-    '-E',
-    '/usr/lib/lua-language-server/main.lua'
-  },
-  capabilities = capabilities,
-})
 
 local opts = {
     -- whether to highlight the currently hovered symbol
