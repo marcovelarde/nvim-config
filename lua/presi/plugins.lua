@@ -47,7 +47,7 @@ Plug('digitaltoad/vim-pug')
 Plug('psf/black')
 -- Plug('crispgm/nvim-go')
 Plug('ray-x/go.nvim')
--- Plug('jiangmiao/auto-pairs')
+Plug('jiangmiao/auto-pairs')
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug('nvim-treesitter/playground')
 
