@@ -10,16 +10,17 @@ local custom_captures = {
 
 local _ = require("nvim-treesitter.configs").setup {
   ensure_installed = {
-    "go",
-    "rust",
-    "python",
-    "typescript",
-    "vue",
-    -- "pug",
     "css",
+    "go",
     "html",
     "lua",
-    "vim"
+    "norg",
+    -- "pug",
+    "python",
+    "rust",
+    "typescript",
+    "vim",
+    "vue",
   },
   highlight = {
     enable = true,
