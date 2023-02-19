@@ -8,8 +8,7 @@ require('toggleterm').setup {
     -- vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<esc>', true, false, true), 'm', true)
   end,
   direction = 'float',
-  start_in_insert = false,
-  -- open_mapping = [[<c-\>]],  -- <C-T> seted in maps
+  start_in_insert = true,
   open_mapping = [[<c-t>]],
   hide_numbers = false,
   winbar = {

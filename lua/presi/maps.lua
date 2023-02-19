@@ -9,7 +9,6 @@ map('n', '<space><CR>', ':so ~/.config/nvim/init.lua<CR>', { noremap = true })
 map('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
 map('n', '<leader>we', ':w<CR> :edit', { noremap = true, silent = true })
 map('n', 'Y', 'y$', { noremap = true })
--- map('n', '<C-t>', ':tabclose<CR>', { noremap = true, silent = true })
 map('i', '<C-BS>', '<C-o>cb', { noremap = true, silent = true })
 map('i', '<C-Del>', '<C-o>cw', { noremap = true, silent = true })
 
@@ -65,14 +64,6 @@ map('n', '<leader>b', '<cmd>Telescope buffers<CR>', { noremap = true })
 map('n', '<leader>lg', '<cmd>Telescope live_grep<CR>', { noremap = true })
 map('n', '<leader>ht', '<cmd>Telescope help_tags<CR>', { noremap = true })
 
--- ToggleTermi
--- map('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
--- map('n', '<C-t>', '<cmd>ToggleTerm<CR>', { noremap = true })
--- map('n', '1<C-t>', '<cmd>1ToggleTerm<CR>', { noremap = true })
--- map('n', '2<C-t>', '<cmd>2ToggleTerm<CR>', { noremap = true })
--- map('n', '3<C-t>', '<cmd>3ToggleTerm<CR>', { noremap = true })
--- map('n', '4<C-t>', '<cmd>4ToggleTerm<CR>', { noremap = true })
-
 map('n', '<leader>ts', '<cmd>ToggleTerm direction=float<CR>', { noremap = true })
 map('n', '<leader>ts2', '<cmd>2ToggleTerm direction=float<CR>', { noremap = true })
 map('n', '<leader>ts3', '<cmd>3ToggleTerm direction=float<CR>', { noremap = true })
@@ -103,7 +94,7 @@ map('n', '<leader>sd', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = t
 map('n', '<leader>gn', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true })
 map('n', '<leader>gp', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true })
 map('n', '<leader>vll', '<cmd>call LspLocationList()<CR>', { noremap = true })
-map('n', 'F', '<cmd>lua vim.lsp.buf.formatting()<CR>', { noremap = true })
+map('n', 'F', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', { noremap = true })
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true })
 
 -- LSP Lines
@@ -115,7 +106,7 @@ map('n', '<leader>f', ':Prettier<CR>', { silent = true })
 -- NvimTree
 map('n', '<C-n>', ':NvimTreeToggle<CR>')
 map('n', '<leader>r', ':NvimTreeRefresh<CR>')
-map('n', '<leader>n', ':NvimTreeFindFile<CR>')
+-- map('n', '<leader>n', ':NvimTreeFindFile<CR>') -- 
 
 -- SymbolsOutline
 map('n', '<C-k>', ':SymbolsOutline<CR>')

@@ -35,18 +35,18 @@ cmp.setup({
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
+    { name = 'nvim_lsp', keyword_length = 2 },
+    { name = 'luasnip', keyword_length = 2 },
   }, {
-    { name = 'buffer' },
+    { name = 'buffer', keyword_length = 3 },
   })
 })
 
 -- '/' cmd setup
-cmp.setup.cmdline('/', {
+cmp.setup.cmdline({ '/', '?' }, {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
-    { name = 'buffer' }
+    { name = 'buffer', keyword_length = 2 }
   }
 })
 
@@ -56,11 +56,10 @@ cmp.setup.cmdline(':', {
   sources = cmp.config.sources(
     {
       { name = 'path'}
+    },
+    {
+      { name = 'cmdline', keyword_length = 2 }
     }
-    --,
-    -- {
-    --   { name = 'buffer' }
-    -- }
   )
 })
 
