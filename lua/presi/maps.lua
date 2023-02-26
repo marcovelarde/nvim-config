@@ -33,8 +33,8 @@ map('i', '<C-k>', '<esc>:m .-2<CR>==', { noremap = true })
 -- map('n', '<expr>j', '(v:count > 5 ? "m\'" . v:count : "") . \'j\'', { expr = true })
 
 -- Navigation
-map('n', '<leader>v', '<cmd>vsplit<CR>', { noremap = true })
-map('n', '<leader>s', '<cmd>split<CR>', { noremap = true })
+-- map('n', '<leader>v', '<cmd>vsplit<CR>', { noremap = true })
+-- map('n', '<leader>s', '<cmd>split<CR>', { noremap = true })
 map('n', '<C-l>', '<cmd>bn<CR>', { noremap = true })
 map('n', '<C-h>', '<cmd>bp<CR>', { noremap = true })
 map('n', '<S-q>', '<cmd>bd<CR>', { noremap = true })
@@ -82,6 +82,10 @@ map('n', '<leader>th4', '<cmd>4ToggleTerm direction=horizontal<CR>', { noremap =
 -- Commenter
 map('v', '++', ':CommentToggle<CR>')
 map('n', '++', ':CommentToggle<CR>')
+
+-- Harpoon
+map('n', '<C-m>', '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', { noremap = true })
+map('n', '<C-a>', '<cmd>lua require("harpoon.mark").add_file()<CR>', { noremap = true })
 
 -- LSP
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { silent = true })

@@ -46,8 +46,8 @@ Plug('posva/vim-vue')
 Plug('digitaltoad/vim-pug')
 Plug('psf/black')
 -- Plug('crispgm/nvim-go')
+-- Plug('jiangmiao/auto-pairs')
 Plug('ray-x/go.nvim')
-Plug('jiangmiao/auto-pairs')
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug('nvim-treesitter/playground')
 
@@ -57,9 +57,10 @@ Plug('folke/neodev.nvim')
 -- Helpers
 Plug('terrortylor/nvim-comment')
 Plug('JoosepAlviste/nvim-ts-context-commentstring')
-Plug('prettier/vim-prettier', { ['do'] = 'yarn install --frozen-lockfile --production' } )
+Plug('prettier/vim-prettier', { ['do'] = 'yarn install --frozen-lockfile --production' })
 Plug('lukas-reineke/indent-blankline.nvim')
-Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' } )
+Plug('iamcco/markdown-preview.nvim', { ['do'] = 'cd app && yarn install' })
+Plug('ThePrimeagen/harpoon')
 
 -- Status bottom bar
 Plug('vim-airline/vim-airline')
