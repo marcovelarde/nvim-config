@@ -162,8 +162,9 @@ lspconfig.rust_analyzer.setup{
   cmd = { "rust-analyzer" },
   filetypes = { "rust" }
 }
-lspconfig.sqls.setup{
-  filetypes = { "sql", "postgres" }
+lspconfig.sqlls.setup{
+  cmd =  { "sql-language-server", "up", "--method", "stdio" },
+  filetypes = { "sql", "postgres" },
 }
 lspconfig.html.setup {
   capabilities = capabilities,
