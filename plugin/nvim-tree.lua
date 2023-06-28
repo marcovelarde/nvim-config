@@ -35,7 +35,7 @@ require'nvim-tree'.setup {
       list = {}
     },
     float = {
-        enable = true,
+      enable = true,
     }
   },
   actions = {

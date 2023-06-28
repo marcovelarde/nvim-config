@@ -50,6 +50,7 @@ Plug('psf/black')
 Plug('ray-x/go.nvim')
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug('nvim-treesitter/playground')
+Plug('folke/which-key.nvim')
 
 -- Lua plugins
 Plug('folke/neodev.nvim')
@@ -89,6 +90,9 @@ Plug('akinsho/toggleterm.nvim')
 
 -- Copilot
 Plug('github/copilot.vim')
+
+-- Other
+Plug('vinnymeller/swagger-preview.nvim', { ['do'] = 'npm install -g swagger-ui-watcher' })
 
 vim.call('plug#end')
 -- vim.call(Plug.end())
