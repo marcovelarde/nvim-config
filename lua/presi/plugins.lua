@@ -15,7 +15,6 @@ Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/vim-vsnip')
 Plug('saadparwaiz1/cmp_luasnip')
 Plug('L3MON4D3/LuaSnip')
--- Plug('ackyshake/VimCompletesMe')
 
 Plug('glepnir/lspsaga.nvim')
 Plug('simrat39/symbols-outline.nvim')
@@ -26,7 +25,6 @@ Plug('https://git.sr.ht/~whynothugo/lsp_lines.nvim')
 -- Color schemes
 Plug('morhetz/gruvbox')
 Plug('ayu-theme/ayu-vim')
-Plug('folke/lsp-colors.nvim')
 Plug('navarasu/onedark.nvim')
 Plug('tyrannicaltoucan/vim-deep-space')
 
@@ -45,11 +43,10 @@ Plug('tbastos/vim-lua')
 Plug('posva/vim-vue')
 Plug('digitaltoad/vim-pug')
 Plug('psf/black')
--- Plug('crispgm/nvim-go')
--- Plug('jiangmiao/auto-pairs')
 Plug('ray-x/go.nvim')
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug('nvim-treesitter/playground')
+Plug('nvim-neorg/neorg')
 Plug('folke/which-key.nvim')
 
 -- Lua plugins
@@ -68,7 +65,7 @@ Plug('vim-airline/vim-airline')
 Plug('vim-airline/vim-airline-themes')
 
 -- File explorer
-Plug('kyazdani42/nvim-web-devicons') -- for file icons
+Plug('kyazdani42/nvim-web-devicons')
 Plug('kyazdani42/nvim-tree.lua')
 
 -- Scroll
