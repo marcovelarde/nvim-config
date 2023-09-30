@@ -51,14 +51,6 @@ vim.cmd("autocmd FileType sql vnoremap <C-Enter> <Plug>(DBUI_ExecuteQuery)")
 -- Neovide
 vim.opt.guifont = "Source Code Pro:h11"
 
--- Indentation
-vim.opt.list = true
-vim.opt.listchars:append("eol:↴")
-require("indent_blankline").setup {
-  space_char_blankline = " ",
-  show_current_context = true,
-}
-
 -- Python provider
 vim.g.python3_host_prog = '/home/presi/nvim-venv/bin/python'
 
