@@ -181,6 +181,30 @@ lspconfig.vimls.setup{
   cmd = { 'vim-language-server', '--stdio' }
 }
 
+lspconfig.yamlls.setup{
+  capabilities = capabilities,
+  settings = {
+    redhat = {
+      telemetry = {
+        enable = false
+      }
+    },
+    yaml = {
+      schemas = {
+        ['https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.1/schema.json'] = '*API.yml',
+        ['https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json'] = 'docker-compose.yml',
+        ['https://raw.githubusercontent.com/jetstack/cert-manager/release-0.11/deploy/manifests/00-crds.yaml'] = 'cert-manager-crds.yaml',
+        ['http://json.schemastore.org/github-workflow'] = '.github/workflows/*.{yml,yaml}',
+        ['http://json.schemastore.org/github-action'] = '.github/action.{yml,yaml}',
+        ['http://json.schemastore.org/prettierrc'] = '.prettierrc.{yml,yaml}',
+        ['http://json.schemastore.org/stylelintrc'] = '.stylelintrc.{yml,yaml}',
+        ['http://json.schemastore.org/circleciconfig'] = '.circleci/**/*.{yml,yaml}',
+        -- ['https://raw.githubusercontent.com/actions/starter-workflows/main/ci/go.yml'] = '.github/workflows/go.yml',
+      }
+    }
+  }
+}
+
 local opts = {
     -- whether to highlight the currently hovered symbol
    -- disable if your cpu usage is higher than you want it

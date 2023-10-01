@@ -19,8 +19,8 @@ require 'ibl'.setup {
     enabled = true,
   },
   indent = {
-    char = '│',
-    tab_char = '│',
+    char = '▎',
+    tab_char = '▎',
   },
   whitespace = {
     remove_blanklikn_trail = true,
