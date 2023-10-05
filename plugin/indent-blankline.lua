@@ -23,7 +23,7 @@ require 'ibl'.setup {
     tab_char = '▎',
   },
   whitespace = {
-    remove_blanklikn_trail = true,
+    remove_blankline_trail = true,
   },
 }
 
